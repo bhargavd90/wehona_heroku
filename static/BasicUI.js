@@ -55,11 +55,6 @@ var base_url = "https://wehona.herokuapp.com/"
 
 // var base_url = "http://127.0.0.1:5000/"
 
-const production  = 'https://examplePage.com';
-const development = 'http://localhost:3000/';
-const url = (process.env.NODE_ENV ? production : development);
-
-
 
 
 function addWhat(params){
