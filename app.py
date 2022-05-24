@@ -2,11 +2,15 @@ from flask import Flask, request, render_template
 from flask_cors import CORS
 import cluster
 import warnings
+import os
 
 warnings.simplefilter("ignore")
 
 app = Flask(__name__)
 CORS(app)
+
+port = int(os.environ.get("PORT", 5000))
+
 
 
 # 1-1 edges after finding related events
@@ -78,4 +82,4 @@ def get_what_for_cluster():
     return cluster_what
 
 
-app.run(host='127.0.0.1', port='8080')
+app.run(host='0.0.0.0', port=port)
