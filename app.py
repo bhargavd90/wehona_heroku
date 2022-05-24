@@ -2,16 +2,12 @@ from flask import Flask, request, render_template
 from flask_cors import CORS
 import cluster
 import warnings
-import os
+
 
 warnings.simplefilter("ignore")
 
 app = Flask(__name__)
 CORS(app)
-
-port = int(os.environ.get("PORT", 5000))
-
-
 
 # 1-1 edges after finding related events
 # related events complete display ui
@@ -81,5 +77,3 @@ def get_what_for_cluster():
     cluster_what = cluster.generate_custer_what(cluster_method_no)
     return cluster_what
 
-
-app.run()
