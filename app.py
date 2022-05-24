@@ -82,4 +82,4 @@ def get_what_for_cluster():
     return cluster_what
 
 
-app.run(host='0.0.0.0', port=port)
+app.run()
