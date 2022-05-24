@@ -54,7 +54,7 @@ var not_from_slider = true
 
 
 function addWhat(params){
-  var python_url = 'http://localhost:5000/get_what_for_cluster';
+  var python_url = 'https://wehona.herokuapp.com/get_what_for_cluster';
   var cluster_method_no = '?cluster_method_no=' + document.getElementById("cluster_method_list").value + ":" + "cluster_" + params.nodes[0].toString();
   $.ajax({
     url: python_url + cluster_method_no,
@@ -225,7 +225,7 @@ var showRelatedEvent = function() {
 
 function addSummary(params){
   document.getElementById('summary_button').style.display = "none";
-  var python_url = 'http://localhost:5000/get_summary_for_cluster';
+  var python_url = 'https://wehona.herokuapp.com/get_summary_for_cluster';
   var cluster_method_no = '?cluster_method_no=' + document.getElementById("cluster_method_list").value + ":" + "cluster_" + params.nodes[0].toString();
   $.ajax({
     url: python_url + cluster_method_no,
@@ -701,7 +701,7 @@ function openInfo(){
 }
 
 function generateHierarchy(){
-var python_url = 'http://localhost:5000/generate_hierarchy';
+var python_url = ' https://wehona.herokuapp.com/generate_hierarchy';
 var split_entity_string = "";
 $("input:checkbox[name=constraint]:checked").each(function () {
             split_entity_string = split_entity_string + $(this).attr("id") + ":";
@@ -780,7 +780,7 @@ function search_focus_node(){
       easingFunction: "linear",
     },
   };
-  var python_url = 'http://localhost:5000/search_node';
+  var python_url = ' https://wehona.herokuapp.com/search_node';
   var search_term = '?search_term=' + document.getElementById("search_node").value;
   var method_name = '&method_name=' + document.getElementById("cluster_method_list").value;
   $.ajax({
