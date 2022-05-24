@@ -479,10 +479,10 @@ function displayTree() {
 set_entity_names();
 n_list = [];
 if(document.getElementById("cluster_method_list").value == "Hubble"){
-    news_path = '/results_dynamic/news.json';
+    news_path = '/static/news_dynamic.json';
 }
 else if (document.getElementById("cluster_method_list").value == "Voyager"){
-    news_path = '/results_dynamic/top2vecnews.json';
+    news_path = '/static/top2vecnews_dynamic.json';
 }
     fetch(news_path).then(response => {
   return response.json();

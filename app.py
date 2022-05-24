@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 from flask_cors import CORS
 import cluster
 import warnings
@@ -16,6 +16,11 @@ CORS(app)
 
 # cluster.storeHierarchyData()
 # cluster.generateHierarchy(["content"], 2, 0, 1)
+
+@app.route('/')
+def home():
+    return render_template('BasicUI.html')
+
 
 @app.route('/test_heroku')
 def test_heroku():
