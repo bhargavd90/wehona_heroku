@@ -1,4 +1,3 @@
-import helper
 import storingAndLoading
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -109,8 +108,9 @@ def generate_custer_summary(cluster_method_no):
         if cluster_no in summaries:
             return summaries[cluster_no]
         else:
-            news = storingAndLoading.load_dynamic_news()
-            cluster_summary = helper.generate_custer_summary(news, cluster_no)
+            # news = storingAndLoading.load_dynamic_news()
+            # cluster_summary = helper.generate_custer_summary(news, cluster_no)
+            cluster_summary = "sentence_transformers"
             summaries[cluster_no] = cluster_summary
             storingAndLoading.store_summaries_hubble(summaries)
             return cluster_summary
@@ -119,8 +119,9 @@ def generate_custer_summary(cluster_method_no):
         if cluster_no in summaries:
             return summaries[cluster_no]
         else:
-            news = storingAndLoading.load_dynamic_top2vec_news()
-            cluster_summary = helper.generate_custer_summary(news, cluster_no)
+            # news = storingAndLoading.load_dynamic_top2vec_news()
+            # cluster_summary = helper.generate_custer_summary(news, cluster_no)
+            cluster_summary = "sentence_transformers"
             summaries[cluster_no] = cluster_summary
             storingAndLoading.store_summaries_voyager(summaries)
             return cluster_summary
@@ -135,8 +136,9 @@ def generate_custer_what(cluster_method_no):
         if cluster_no in whats:
             return whats[cluster_no]
         else:
-            news = storingAndLoading.load_dynamic_news()
-            cluster_what = helper.generate_custer_what(news, cluster_no)
+            # news = storingAndLoading.load_dynamic_news()
+            # cluster_what = helper.generate_custer_what(news, cluster_no)
+            cluster_what = "sentence_transformers"
             whats[cluster_no] = cluster_what
             storingAndLoading.store_whats_hubble(whats)
             return cluster_what
@@ -145,8 +147,9 @@ def generate_custer_what(cluster_method_no):
         if cluster_no in whats:
             return whats[cluster_no]
         else:
-            news = storingAndLoading.load_dynamic_top2vec_news()
-            cluster_what = helper.generate_custer_what(news, cluster_no)
+            # news = storingAndLoading.load_dynamic_top2vec_news()
+            # cluster_what = helper.generate_custer_what(news, cluster_no)
+            cluster_what = "sentence_transformers"
             whats[cluster_no] = cluster_what
             storingAndLoading.store_whats_voyager(whats)
             return cluster_what

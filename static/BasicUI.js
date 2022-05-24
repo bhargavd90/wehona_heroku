@@ -758,11 +758,11 @@ function content_depth_slider_onchange(){
 
 function cluster_method_change(){
     if(document.getElementById("cluster_method_list").value == "Hubble"){
-        document.getElementById("settings").style.display = "block";
+        // document.getElementById("settings").style.display = "block";
         reset_event_representation_news_content();
         }
     else if (document.getElementById("cluster_method_list").value == "Voyager"){
-        document.getElementById("settings").style.display = "none";
+        // document.getElementById("settings").style.display = "none";
         reset_event_representation_news_content();
         }
     displayTree();
