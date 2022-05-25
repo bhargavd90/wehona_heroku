@@ -27,7 +27,7 @@ var options;
 
 var current_image_no = 0;
 
-var images_list = ["/images/image_1.png", "/images/image_2.png", "/images/news_3.jpg", "/images/news_4.jpg", "/images/news_5.jpg"]
+var images_list = ["/static/image_1.png", "/static/image_2.png", "/static/image_3.png", "/static/image_4.png", "/static/image_5.png", "/static/image_6.png", "/static/image_7.png"]
 
 var modal_news = document.getElementById('modalNews');
 var modal_news_content = document.getElementById('modalNewsContent');
