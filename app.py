@@ -77,3 +77,7 @@ def get_what_for_cluster():
     cluster_what = cluster.generate_custer_what(cluster_method_no)
     return cluster_what
 
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", debug=False)
+    
+
