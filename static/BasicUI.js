@@ -53,9 +53,9 @@ var not_from_slider = true
 
 // var base_url = "https://wehona.herokuapp.com/"
 
-// var base_url = "https://wehona.onrender.com/"
+var base_url = "https://wehona.onrender.com/"
 
-var base_url = "http://127.0.0.1:5000/"
+// var base_url = "http://127.0.0.1:5000/"
 
 
 
