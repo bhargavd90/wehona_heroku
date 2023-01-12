@@ -3,11 +3,11 @@ from flask_cors import CORS
 import cluster
 import warnings
 
+
 warnings.simplefilter("ignore")
 
 app = Flask(__name__)
 CORS(app)
-
 
 # 1-1 edges after finding related events
 # related events complete display ui
@@ -77,6 +77,7 @@ def get_what_for_cluster():
     cluster_what = cluster.generate_custer_what(cluster_method_no)
     return cluster_what
 
-
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0", debug=False)
+    
+
